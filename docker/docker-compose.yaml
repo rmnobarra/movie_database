@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  #containerizando:
+  #  container_name: containerizando
+  #  image: rmnobarra/containerizando
+  #  environment:
+  #    DATABASE_URL: "jdbc:postgresql://postgres:5432/db"
+  #  depends_on:
+  #    - "postgres"
+  #  ports:
+  #    - 8080:8080   
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+              
+volumes:
+  db_data: {}

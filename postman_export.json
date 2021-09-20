@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "be4e6d37-30d8-4818-8d67-28483cd019d3",
+		"name": "Movie Database",
+		"description": "Postman para o projeto Movie Database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies"
+					]
+				},
+				"description": "Lista todos os filmes"
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"1"
+					]
+				},
+				"description": "Lista filme baseado no id"
+			},
+			"response": []
+		},
+		{
+			"name": "Create movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"78987132132\",\n    \"title\": \"Back to the Future I\",\n    \"director\": {\n        \"firstname\": \"Robert\",\n        \"lastname\": \"Zemeckis\"\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies"
+					]
+				},
+				"description": "Cria movie"
+			},
+			"response": []
+		},
+		{
+			"name": "Update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"78987132132\",\n    \"title\": \"Back to the Future II\",\n    \"director\": {\n        \"firstname\": \"Robert\",\n        \"lastname\": \"Zemeckis\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/movies/427131847",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"427131847"
+					]
+				},
+				"description": "Atualiza o filme baseado no id"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/movies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"movies",
+						"1"
+					]
+				},
+				"description": "Deleta o filme baseado no id"
+			},
+			"response": []
+		}
+	]
+}
